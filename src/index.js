@@ -1,22 +1,33 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState, useEffect } from 'react';
 
-import styles from './styles.css'
+export default function src({marked, callback, width, height}) {
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
+  const [ mark, setMark ] = useState(marked)
+  
+  if(callback){
+    useEffect(()=>{
+      callback(mark)
+    },[mark])
   }
 
-  render() {
-    const {
-      text
-    } = this.props
+  return (
+    <div
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
+      onClick={()=>{
+        setMark(!mark)
+      }}
+
+      style={{
+        minWidth: 10,
+        minHeight: 10,
+        width: width ? width : 20,
+        height: height ? height : 20,
+        border: 'solid 2px #B4D9CB',
+        borderRadius: 3,
+        background: mark ? "#BEE6D7" : 'white'
+      }}
+    
+    />
+
+  );
 }
