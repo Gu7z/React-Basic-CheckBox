@@ -7,11 +7,11 @@
 ## Install
 
 ```bash
-npm install --save react-simple-checkbox
+npm install --save react-basic-checkbox
 ```
 
 ```bash
-yarn add react-simple-checkbox
+yarn add react-basic-checkbox
 ```
 
 ## Usage
