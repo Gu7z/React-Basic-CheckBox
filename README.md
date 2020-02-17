@@ -10,21 +10,33 @@
 npm install --save react-simple-checkbox
 ```
 
+```bash
+yarn add react-simple-checkbox
+```
+
 ## Usage
 
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-simple-checkbox'
+import CheckBox from 'react-simple-checkbox'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <CheckBox callback={(status)=>{console.log(status)}} /> // Log true or false on console
+      <CheckBox marked={false} width={50} height={60} />
     )
   }
 }
 ```
+
+| props    | type                                        
+|----------|-----------------------------------------------------
+| marked   | boolean     
+| width    | number (px)                                          
+| height   | number (px)                                          
+| callback | function to return checkbox component marked state 
 
 ## License
 
