@@ -16,18 +16,18 @@ yarn add react-basic-checkbox
 
 ## Usage
 
+![CheckBox](https://media.giphy.com/media/kBrUlaNi2k67LUWFXO/giphy.gif)
+
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
 import CheckBox from 'react-simple-checkbox'
 
-class Example extends Component {
-  render () {
-    return (
-      <CheckBox callback={(status)=>{console.log(status)}} /> // Log true or false on console
-      <CheckBox marked={false} width={50} height={60} />
-    )
-  }
+function Example(){
+  return (
+    <CheckBox callback={(status)=>{console.log(status)}} /> // Log true or false on console
+    <CheckBox marked={false} width={50} height={60} />
+  )
 }
 ```
 
